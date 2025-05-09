@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tshimollo Malebatja</title>
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background: #0e0e0e;
+      color: #f0f0f0;
+    }
+
+    /* Background video */
+    .background-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 4rem 2rem;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .reveal {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+      transition: all 1s ease;
+    }
+
+    .headline {
+      font-family: 'ADLaM Display', cursive;
+      font-size: 4rem;
+      font-weight: bold;
+      text-align: center;
+      background: linear-gradient(90deg, #00f260, #0575e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      max-width: 1200px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .left, .right {
+      flex: 1 1 45%;
+    }
+
+    .left img, .right img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      transition: transform 1s ease;
+    }
+
+    .left img:hover, .right img:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    em {
+      color: #ccc;
+    }
+
+    #contact h2 {
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="background-video">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <section id="intro">
+    <div class="headline">The Future Is Here</div>
+  </section>
+
+  <section id="about">
+    <div class="content-wrapper">
+      <div class="left">
+        <h2>This is Tshimollo Malebatja</h2>
+        <p><em>Hi, my name is Tshimollo Malebatja. I'm currently pursuing my undergraduate studies in Business Analysis in Information Systems at the Richfield Graduate Institute of Technology. I have a growing foundation in both the business and IT sectors, and I’m passionate about bridging the gap between the two to help organizations make smarter, data-driven decisions.</em></p>
+      </div>
+      <div class="right">
+        <img src="tshimollo.jpg" alt="Tshimollo"/>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro2">
+    <div class="content-wrapper">
+      <div class="right">
+        <p>
+          I am a purpose-driven individual with a deep passion for the future of technology and its potential to transform lives—especially across the African continent. More than anything, I am committed to supporting and scaling African startups, with the bold vision of helping create billion-rand unicorns that originate right here at home. My goal is to be at the forefront of Africa’s innovation ecosystem—leading, advising, and building startups that not only grow in valuation but also create meaningful impact. I aspire to combine strategic business insight with technology to unlock the full potential of African entrepreneurship.
+        </p>
+      </div>
+      <div class="left">
+        <img src="future-tech.jpg" alt="Future Tech"/>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="buttons">
+      <a href="Tshimollo-Malebatja-CV.pdf" download>
+        <button>Download CV</button>
+      </a>
+      <a href="https://wa.me/27684109591?text=Hi%20Tshimollo%20Malebatja%2C%20I%20would%20like%20to%20connect%20with%20you.">
+        <button>WhatsApp</button>
+      </a>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.utils.toArray("section").forEach((section, i) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 85%",
+        onEnter: () => section.classList.add("reveal"),
+        onLeaveBack: () => section.classList.remove("reveal")
+      });
+    });
+  </script>
+
+</body>
+</html>
